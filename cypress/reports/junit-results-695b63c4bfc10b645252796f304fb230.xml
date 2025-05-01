@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.307" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2025-05-01T02:11:32" tests="0" file="cypress\e2e\carrinho.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Carrinho" timestamp="2025-05-01T02:11:32" tests="2" time="6.306" failures="1">
+    <testcase name="Carrinho Adicionar produtos ao carrinho com sucesso" time="3.562" classname="Adicionar produtos ao carrinho com sucesso">
+    </testcase>
+    <testcase name="Carrinho Remover produtos do carrinho com sucesso" time="0.000" classname="Remover produtos do carrinho com sucesso">
+      <failure message="Cannot read properties of undefined (reading &apos;screenshot&apos;)" type="TypeError"><![CDATA[TypeError: Cannot read properties of undefined (reading 'screenshot')
+    at Context.eval (webpack://cypress-automation/./cypress/e2e/carrinho.cy.js:43:12)
+    at runnable.fn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:140422:19)
+    at callFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:159500:21)
+    at Runnable.run (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:159487:7)
+    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:165559:30)
+    at PassThroughHandlerContext.finallyHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4042:23)
+    at PassThroughHandlerContext.tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)
+    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
