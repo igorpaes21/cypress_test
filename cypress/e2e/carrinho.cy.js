@@ -1,15 +1,19 @@
 describe('Carrinho', () => {
 
+    beforeEach(() => {
+          //Arrage
+          cy.visit('https://www.saucedemo.com/')
+
+          cy.get('[data-test="username"]').type('standard_user')
+  
+          cy.get('[data-test="password"]').type('secret_sauce')
+  
+          cy.get('[data-test="login-button"]').click()
+
+    })
+
     it('Adicionar produtos ao carrinho com sucesso', () => {
-        //Arrage
-        cy.visit('https://www.saucedemo.com/')
-
-        cy.get('[data-test="username"]').type('standard_user')
-
-        cy.get('[data-test="password"]').type('secret_sauce')
-
-        cy.get('[data-test="login-button"]').click()
-
+      
         //Act
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
 
@@ -24,15 +28,8 @@ describe('Carrinho', () => {
 })
 
     it('Remover produtos do carrinho com sucesso', () => {
-        //Arrage
-        cy.visit('https://www.saucedemo.com/')
-
-        cy.get('[data-test="username"]').type('problem_user')
-
-        cy.get('[data-test="password"]').type('secret_sauce')
-
-        cy.get('[data-test="login-button"]').click()
-
+        
+        //Arrange
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
 
         cy.get('[.shopping_cart_badge]').should('be.visible')

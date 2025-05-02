@@ -1,7 +1,10 @@
 describe('Login',() => {
   it('Realizar login com sucesso', () => {
-    //Arrange 
+
+    beforeEach(() => {
+      //Arrange 
     cy.visit('https://www.saucedemo.com/')
+    })
 
     //Act
     cy.get('[data-test="username"]').type('standard_user')
@@ -17,9 +20,7 @@ describe('Login',() => {
   })
 
   it('Realizar login informando credencias inválidas', () => {
-    //Arrange 
-    cy.visit('https://www.saucedemo.com/')
-
+    
     //Act
     cy.get('[data-test="username"]').type('user')
     cy.get('[data-test="password"]').type('senha_errada')
